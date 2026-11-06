@@ -161,6 +161,9 @@
         <p>On teacher-forced development states, STOP recognition rises from 3/16 to 5/16 and 50 cm accuracy from 4/16 to 6/16. The other distance accuracies stay fixed; none of 1,424 ordinary answer-token argmax predictions changes. These narrow offline checks motivated closed-loop evaluation, but do not establish general language preservation or navigation improvement.</p>
         <p>Our first-run conclusion is a working localized intervention with an uncertain quality gain. A stronger efficiency experiment needs an explicit account of wasted decisions, stopping behavior and the execution pipeline before choosing a weight edit.</p>
         <p><a href="assets/method-notes.md">Full method and evaluation notes ↗</a> · <a href="assets/results.csv">Download all 50 paired outcomes ↗</a></p>
+        <h3>A stricter follow-up, now in progress</h3>
+        <p>Experiment 002 starts again from the original checkpoint. Its research agent must diagnose an internal mechanism using training data, test causal interventions, and export a native weight edit. This protocol excludes supervised fitting, output-head changes and inference-time rules. A separate evaluator will test a frozen candidate; the same previously observed first 50 episodes make this an exploratory retest.</p>
+        <p>All results above belong to Experiment 001. The follow-up has no reported result yet. <a href="assets/navila-weight-space-research-prompt.md">Read the complete research prompt ↗</a></p>
       </div>
 </section>
 
