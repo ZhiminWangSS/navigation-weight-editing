@@ -70,3 +70,14 @@ The success comparison had four gains and one loss; exact two-sided McNemar p=0.
 This was a Habitat navigation experiment, with no physical robot-speed measurement. Inference and rollout wall times were recorded separately; rollout already includes inference. Concurrent evaluation and GPU differences also limit timing comparisons. The supported conclusion is a working native weight-editing pipeline with promising but uncertain quality changes, an informative STOP-only regression, and **no demonstrated successful-task speedup**.
 
 Reference implementation of the base model: [official NaVILA repository](https://github.com/AnjieCheng/NaVILA).
+
+
+## First-person before/after video replays
+
+The website includes all four gained-success cases: episodes 6, 19, 21 and 22. Each comparison places the baseline on the left and the frozen combined edit on the right. Frames are real Habitat RGB rendered by replaying the original logged primitive actions with the same frozen scene configuration, start pose and seed. The original evaluation did not save video, so these are action-log simulation replays, not original-time recordings. The policies were not rerun or changed to make these videos.
+
+Every replay state, including the initial state and final STOP, is checked against the recorded position and geodesic goal distance. Final outcomes and metrics are checked too. This verifies agreement with the logged behavior; it does not establish pixel identity with unsaved original observations.
+
+Both sides advance at 5 primitive steps per video second. A completed side holds its final frame and is labeled STOPPED / FRAME HELD. The clips therefore compare behavior, not wall-clock inference time or robot speed. All four examples were selected because they changed from failure to success; the complete evaluation and its lost-success case remain visible elsewhere on the page.
+
+The [replay audit](videos/replay-audit.json) records checksums, media properties and numerical replay checks.
