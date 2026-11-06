@@ -1,8 +1,8 @@
-# NaVILA Edit Lab
+# Navigation Weight Editing
 
-An interactive, English-language presentation of a frozen NaVILA weight-editing experiment.
+An English technical research blog about a frozen NaVILA weight-editing experiment, with a left-hand outline, three opening insights, interactive results, methods and citations.
 
-**Website:** https://zhiminwangss.github.io/navila-weight-editing/
+**Website:** https://zhiminwangss.github.io/navigation-weight-editing/
 
 ## What it shows
 
@@ -33,6 +33,8 @@ GitHub Pages serves `docs/` from the `main` branch. Asset links are relative so 
 
 - `docs/index.html`, `docs/style.css`, `docs/app.js`: presentation and interactions.
 - `docs/assets/experiment-data.js`: sanitized aggregates, paired outcomes and projected trajectories.
+- `docs/blog.css`, `docs/blog.js`: editorial layout, responsive outline, active-section tracking and BibTeX copying.
+- `docs/assets/references.bib`: verified citations for the source blogs and NaVILA.
 - `docs/video-player.js`, `docs/video-player.css`: the responsive before/after video player.
 - `docs/assets/videos/`: H.264 comparisons, poster frames and a sanitized replay audit.
 - `docs/assets/results.csv`: paired baseline/combined episode metrics.
@@ -46,3 +48,5 @@ Trajectory views are ground-plane projections of simulator coordinates. Height, 
 
 - [NaVILA](https://navila-bot.github.io/)
 - [Robotics Weight Editing](https://cuzyoung.github.io/robotics-weight-editing/), the framework inspiration. This experiment adapts the general approach rather than reproducing its VLA-specific methods.
+
+- [Sparks of Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/), the broader research perspective. The first run uses supervised ridge fitting and does not reproduce the stricter reasoning-only protocols.

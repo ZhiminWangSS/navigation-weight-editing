@@ -106,7 +106,7 @@
   });
 
   const heroCanvas=$('hero-canvas'), labCanvas=$('trajectory-canvas');
-  const heroCtx=heroCanvas.getContext('2d'), labCtx=labCanvas.getContext('2d');
+  const heroCtx=heroCanvas?.getContext('2d'), labCtx=labCanvas.getContext('2d');
   function dimensions(canvas) {
     const {width,height}=canvas.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio || 1,2);
     if (canvas.width!==Math.round(width*dpr) || canvas.height!==Math.round(height*dpr)) {canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);}
@@ -176,7 +176,7 @@
   $('motion-toggle').addEventListener('click',()=>{motionEnabled=!motionEnabled;updateMotion();});
   let heroVisible=true,labVisible=false;
   const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.target===heroCanvas)heroVisible=e.isIntersecting;else labVisible=e.isIntersecting;}),{rootMargin:'100px'});
-  observer.observe(heroCanvas);observer.observe(labCanvas);
+  if (heroCanvas) observer.observe(heroCanvas);observer.observe(labCanvas);
   let lastFrame=0;
   function animate(now){
     if(now-lastFrame>30){
@@ -187,7 +187,7 @@
     requestAnimationFrame(animate);
   }
   const resize=new ResizeObserver(()=>{renderTrace(heroCanvas,heroCtx,data.trajectories[0],1,true,performance.now());drawLab();});
-  resize.observe(heroCanvas);resize.observe(labCanvas);
+  if (heroCanvas) resize.observe(heroCanvas);resize.observe(labCanvas);
   updateMotion();setTrajectory(6);requestAnimationFrame(animate);
   const updateScroll=()=>{const d=document.documentElement;const ratio=(d.scrollHeight-d.clientHeight)>0?window.scrollY/(d.scrollHeight-d.clientHeight):0;$('scroll-progress').style.width=`${ratio*100}%`;};
   window.addEventListener('scroll',updateScroll,{passive:true});updateScroll();
