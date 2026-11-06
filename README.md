@@ -34,7 +34,8 @@ GitHub Pages serves `docs/` from the `main` branch. Asset links are relative so 
 - `docs/index.html`, `docs/style.css`, `docs/app.js`: presentation and interactions.
 - `docs/assets/experiment-data.js`: sanitized aggregates, paired outcomes and projected trajectories.
 - `docs/blog.css`, `docs/blog.js`: editorial layout, responsive outline, active-section tracking and BibTeX copying.
-- `docs/assets/references.bib`: verified citations for the source blogs and NaVILA.
+- `docs/assets/citation.bib`: citation for this research blog, authored by Zhimin Wang.
+- `docs/assets/references.bib`: bibliographic metadata for the source blogs and NaVILA.
 - `docs/video-player.js`, `docs/video-player.css`: the responsive before/after video player.
 - `docs/assets/videos/`: H.264 comparisons, poster frames and a sanitized replay audit.
 - `docs/assets/results.csv`: paired baseline/combined episode metrics.
