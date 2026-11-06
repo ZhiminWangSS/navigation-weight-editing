@@ -1,0 +1,43 @@
+# NaVILA Edit Lab
+
+An interactive, English-language presentation of a frozen NaVILA weight-editing experiment.
+
+**Website:** https://zhiminwangss.github.io/navila-weight-editing/
+
+## What it shows
+
+- Four variants, evaluated on the same first 50 R2R-CE val_unseen episodes.
+- Interactive comparisons of navigation success, precise stopping, SPL and model calls.
+- Six pairs of real recorded trajectories, including all four gained successes and the one lost success.
+- The complete 50-episode paired outcome grid and downloadable data.
+- Methods, uncertainty, negative results and the distinction between lower overall inference demand and successful-task speed.
+
+The combined edit increased observed success from 24/50 to 27/50, but did **not** demonstrate faster successful navigation. This is a small exploratory subset, not a confirmed full-benchmark improvement.
+
+## Local preview
+
+No build or installation is needed. With Python 3:
+
+```sh
+python3 -m http.server 8000 --directory docs
+```
+
+Open http://localhost:8000. All application logic and experiment data are local static files. Fonts are requested from Google Fonts, with system fallbacks. No analytics, accounts, or API keys are used.
+
+## Publication
+
+GitHub Pages serves `docs/` from the `main` branch. Asset links are relative so the page works at the repository subpath. `.nojekyll` preserves the static files without a Jekyll build.
+
+## Files
+
+- `docs/index.html`, `docs/style.css`, `docs/app.js`: presentation and interactions.
+- `docs/assets/experiment-data.js`: sanitized aggregates, paired outcomes and projected trajectories.
+- `docs/assets/results.csv`: paired baseline/combined episode metrics.
+- `docs/assets/method-notes.md`: methodology, full result table and caveats.
+
+Trajectory views are ground-plane projections of simulator coordinates. Height, obstacles and floor geometry are not shown; replay is normalized trace progress rather than elapsed time.
+
+## References
+
+- [NaVILA](https://navila-bot.github.io/)
+- [Robotics Weight Editing](https://cuzyoung.github.io/robotics-weight-editing/), the framework inspiration. This experiment adapts the general approach rather than reproducing its VLA-specific methods.
