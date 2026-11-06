@@ -1,72 +1,85 @@
 # Research task: weight-space editing for NaVILA navigation
 
-## Question
+## Objective
 
 Can you improve a pretrained NaVILA navigation policy by understanding and directly editing its internal weights?
 
-Investigate three outcomes: successful navigation, accurate stopping, and efficient completion. Prefer improvements that preserve the other outcomes. Longer forward commands are one possible mechanism, not the objective itself. A robot that stops early or fails sooner has not become a faster successful navigator.
+Start from the original checkpoint and its native interface. Use training data to discover a measurable limitation, explain the relevant mechanism, and test an intervention. No behavioral diagnosis, target component, or edit direction is supplied in advance.
 
-Start from the original checkpoint and its native vision–language action interface. Discover the relevant failure and intervention rather than assuming a layer, token, direction, or editing algorithm in advance.
+Evaluate navigation performance with **success rate (SR), success weighted by path length (SPL), and normalized dynamic time warping (nDTW)**. Report all three, including regressions and unchanged results.
 
-## Research approach
+## Research process
 
-Use the autonomous investigation spirit of Robotics Weight Editing and the mechanism-led direct editing approach of the Weight-Space Programming language-model experiment. This run deliberately adopts a stricter protocol than gradient-free supervised fitting.
+1. Inspect the original architecture and execution path: model inputs, inference, action interpretation, and simulator execution.
+2. Examine representative training-split behavior. Form a small number of explicit hypotheses from measured evidence. State predictions and observations that would falsify each hypothesis before testing it.
+3. Inspect relevant weights and activations. Test causal interventions, declared intervention strengths, ablations, and appropriate controls. Distinguish associations from demonstrated effects.
+4. Construct a justified internal-weight edit. Verify that its effect survives serialization and ordinary checkpoint loading.
+5. Select a candidate using training data only. Confirm it once on reserved training scenes, then freeze the candidate and its complete evaluation configuration.
 
-1. Understand the architecture and execution path. Trace observations, history sampling, prompt construction, generated actions, action parsing, queued primitives, and STOP. Separate model inference time, simulator execution, and end-to-end rollout time.
-2. Study representative training-split behavior. Identify a recurring, measurable failure or inefficiency. Explain what evidence would falsify your diagnosis. A runtime defect must be reported as a runtime defect rather than credited to weight editing.
-3. Inspect relevant weights and activations. Form a small number of explicit internal-mechanism hypotheses. Correlation with a correct action is insufficient evidence.
-4. Intervene causally. Compare the same inputs before and after targeted changes and examine a few declared intervention strengths. Temporary activation interventions are diagnostic controls only. The final effect must survive an actual weight edit and ordinary checkpoint reload.
-5. Confirm the selected edit on unused training scenes, then freeze it for a separate final evaluation. Record unsuccessful hypotheses as well as successful ones.
+A runtime defect is a separate finding; repairing runtime code does not count as a weight-editing result. Record unsuccessful hypotheses and alternative explanations as well as successful interventions.
 
-## Allowed and excluded operations
+## Editing constraints
 
-Allowed: reading model tensors; forward inference; activation inspection; matrix and spectral analysis; hand-specified sparse or low-rank internal tensor changes justified by a mechanism; small, declared dose-response checks; component removal and norm-matched random controls.
+Allowed: inspecting weights and activations; forward inference; matrix and spectral analysis; reasoned sparse or low-rank internal tensor changes; declared dose-response probes; component removal; and norm-matched random controls.
 
-Excluded in this run: backpropagation, autograd gradients, optimizers, LoRA, supervised regression or least-squares fitting to examples, distillation, iterative loss fitting, and automatic black-box parameter optimization. Do not reuse a prior fitted patch or feature cache.
+Excluded: backpropagation, autograd gradients, optimizers, LoRA, supervised regression or least-squares fitting to examples, distillation, iterative loss fitting, and automatic black-box parameter optimization.
 
-Keep input embeddings, the language output head, final normalization, tokenizer, model configuration and architecture unchanged. Do not use whole-tensor scalar multiplication as the intervention. Investigate internal attention/MLP components without prescribing which one must change. These are explicit constraints of this experiment, not a universal definition of all weight-space editing.
+Keep input embeddings, the language output head, final normalization, tokenizer, architecture, and model configuration unchanged. Do not use whole-tensor scalar multiplication as the intervention. These restrictions define this experiment; they are not a universal definition of weight-space programming.
 
-Production inference must retain its original observation sampler, prompt, decoding, action parser, primitive sizes, action queue and episode limit. No runtime hooks, logit processors, added controllers, hardcoded navigation rules, or episode/scene-specific branches may remain in the evaluated policy. Changing action text after generation does not count as a weight edit.
+Keep the original observation sampler, prompt, decoding, action parser, primitive sizes, within-episode action queue, and episode limit. No diagnostic hooks, logit processors, added controllers, action-text rewrites, or episode-specific branches may remain in the evaluated policy. All variants start each episode with fresh episode state under the same frozen evaluation protocol.
 
-## Evidence and data separation
+## Training-only development
 
-Use original R2R training data only for discovery and selection. Before editing, freeze scene-disjoint discovery, selection and confirmation subsets, with no duplicate physical trajectories across subsets. These subsets are held out from this editing process, not necessarily from base-model pretraining. Log checksums and sampling rules.
+Use original R2R training data for all diagnosis, intervention design, tuning, selection, and confirmation. Before measurements, freeze scene-disjoint discovery, selection, and confirmation subsets, deduplicating physical trajectories. These subsets are held out from this editing process, not necessarily from base-model pretraining.
 
-Do not inspect validation episodes, their outcomes, earlier test analyses, previously edited checkpoints, or public experiment results while designing the new edit. A separate evaluator will handle the test set after selection is locked. It is the same first 50 raw-order val_unseen episodes used in an earlier public pilot, so the final comparison is an exploratory retest, not a newly blinded benchmark.
+Before candidate comparisons, declare the selection rule and preservation conditions for SR, SPL, and nDTW. Compare original and edited checkpoints on identical training episodes and seeds. Prefer a candidate that improves at least one of these metrics without observed degradation in the others; report uncertainty and any trade-off. Do not silently redefine the objective after inspecting candidate outcomes.
 
-Before candidate measurements, state the selection rule and preservation conditions. Compare baseline and candidates on the same episodes and seeds. Prefer a candidate that improves at least one target without observed degradation in success, precise stopping or common-success efficiency. If the evidence is weak, report uncertainty. Do not assert that a candidate is effective merely because it has the highest noisy point estimate.
+Use the confirmation subset once after selection, without another tuning cycle. If no candidate is supported, report a negative result. A mechanistically justified rejected or unvalidated candidate may be frozen for a diagnostic final comparison, with its status explicitly recorded before testing. Do not create an arbitrary patch to satisfy a deliverable.
 
-The confirmation subset is used once after selection; it does not start another tuning cycle. If no supported edit survives, report a negative result. You may freeze the best scientifically justified diagnostic candidate for the final comparison if it is explicitly labeled unvalidated or rejected; never present it as an accepted improvement or make an arbitrary patch just to produce a checkpoint.
+## Held-out test separation
+
+The independent evaluator will use the exact existing **SenseNova R2R val_unseen rand100** dataset and its paired ground-truth archive, frozen by file checksums. It must not rebuild a subset from episode IDs in another dataset copy. The research agent receives no test IDs, scene list, instructions, observations, reference paths, labels, or results.
+
+Do not access val_unseen data, evaluator-only artifacts, previous experiments, edited checkpoints, prior hypotheses, feature caches, result analyses, or public experiment pages. Do not use test information to choose training examples, mechanisms, strengths, candidates, or stopping rules for research.
+
+The research agent must start in a fresh context containing only this prompt and a training-only environment handoff. The coordinator and evaluator must not pass prior findings or test feedback into that context.
+
+After selection and confirmation, freeze the patch hash, native checkpoint hashes, construction procedure, candidate status, and all evaluation settings. Only then may the independent evaluator run the original and frozen edited checkpoints on rand100. No partial test feedback goes to the research agent. Final test results cannot change this run's candidate or configuration; they belong in the report, not a new tuning loop.
 
 ## Measurements
 
-Report, separately:
+- **SR, SPL, and nDTW:** use the frozen evaluator's native implementations and the same reference data for both checkpoints. Report aggregate values and per-episode paired results, with units and denominators. Do not replace nDTW or SPL with proxy scores.
+- **Supporting observations:** terminal navigation error, path length, primitive steps, model calls, invalid actions, and timings, where available. These describe behavior; they do not replace the three declared navigation metrics.
+- **Edit integrity:** tensor names and shapes, exact construction, actual changed entries after native serialization and FP16 loading, norms computed with adequate precision, unchanged tensors, and inference overhead.
+- **Research cost:** language-model token usage during the editing process, separately from coordinator/evaluator overhead, NaVILA development inference, and final-test inference.
 
-- Success: explicit STOP at geodesic distance <3 m; SPL, nDTW, final and minimum goal distance.
-- Stopping: explicit STOP within 1 m and 0.5 m, over all episodes; premature stops and timeouts.
-- Efficiency: model calls, primitive steps, path length and collisions. Report paired changes on episodes both policies succeed on, as well as all episodes and changed-success groups. Forward-command length alone is not a speed metric.
-- Timing: inference and total rollout wall time with hardware/load context. Rollout time includes inference. Habitat measurements do not establish real-robot motion speed.
-- Edit: tensor names and shapes, exact construction, actual changed FP16 entries, relative and absolute norms, and runtime overhead.
+Use the same episodes, environment seeds, native model input pipeline, and simulator settings for original and edited policies. Record hardware and concurrent load; distinguish model inference time from total rollout time.
 
-For each hypothesis, record its prediction before the intervention, the observations, alternative explanations, decision to retain/reject, and artifact paths. Keep concise research notes and machine-readable budget/candidate records.
+## Token accounting
 
-## Execution budget and artifact integrity
+Start a run-specific usage ledger before the fresh research agent's first request. Include all of its reasoning, tool-use turns, retries, failed hypotheses, and delegated editing work through the final candidate freeze. Record exact provider-reported usage per response where available: agent/thread identity, model/provider, timestamps, input tokens, cached input tokens, output tokens, reasoning tokens, and total tokens.
 
-For this bounded pilot, use at most 50 diagnostic batches (at most 32 navigation contexts per batch), four candidate edit families, 96 total training-split closed-loop episodes including baselines/controls, and 4,096 total model action-generation calls. Count work across variants and retries. Stop discovery at the first applicable limit or six hours. The locked final evaluation is separate. Do not silently change a budget or redefine what counts as a call.
+Deduplicate response receipts. Cached-input and reasoning counts are usually subsets of input and output respectively; do not add them again to totals. Preserve raw usage definitions and distinguish exact counts from estimates or unavailable fields. Never infer token usage from account quota percentages or transcript length.
 
-Use only allocated idle GPUs and do not interrupt other jobs. Write to a new experiment directory. Preserve the original model, source tree and earlier outputs. Hash original weights/configuration, export edited tensors into a separately loadable checkpoint, verify untouched tensors, and check the original again after evaluation. Save patches with checksums and enough information to reconstruct and remove them. No physical-robot execution is part of this task.
+Keep separate totals for editing agents, coordination/audit work, and preparation before research starts. Log NaVILA development inference token counts with a stated counting convention and do not combine them with the research-agent billable tokens. Keep final-test inference in its own ledger, excluded from editing totals. Record measurement coverage and any pending or missing usage receipts.
+
+## Budget and artifacts
+
+Use at most 50 diagnostic batches of at most 32 navigation contexts each, four candidate families, 96 total training-split closed-loop episodes including baselines and controls, and 4,096 development action-generation calls. Count retries and failed attempts. Stop development at the first applicable limit or six hours. Locked final evaluation is separate. Token usage is measured; no additional language-model token budget is imposed by this prompt.
+
+Plan development allocations before measurements. Record any budget-driven amendment before affected candidate comparisons; do not choose a subset based on favorable outcomes. Preserve all work and count any work already started.
+
+Use allocated idle GPUs only. Write to a new experiment directory. Preserve original code, weights, and earlier artifacts. Hash original model/configuration files, export a separately loadable edited checkpoint, independently verify untouched tensors and configuration, and verify the original again after evaluation. No physical-robot execution is included.
 
 ## Deliverables
 
-Produce a diagnosis backed by measured evidence; an explicit hypothesis and causal/dose-response probes; an edit construction script and patch, if justified; a native checkpoint export and verification report; train-only selection and one-time confirmation records; the frozen final candidate manifest; and a concise report covering all tested hypotheses, regressions, costs and limitations.
+Provide the diagnosis, predeclared hypotheses, causal and control results, construction script and patch if justified, verified native checkpoint, training-only selection and confirmation records, frozen candidate manifest, token-usage ledger with coverage, and a report of all three navigation metrics, regressions, costs, and limitations. A clear negative result is a valid outcome.
 
-The goal is a defensible answer about whether a specific navigation failure can be repaired in internal weight space. A clear negative result is preferable to an unsupported claim of acceleration.
-
-## References
+## Methodological references
 
 - Robotics Weight Editing: https://cuzyoung.github.io/robotics-weight-editing/
-- Its original research prompt: https://cuzyoung.github.io/robotics-weight-editing/assets/source/original-research-prompt.txt
+- Original research prompt: https://cuzyoung.github.io/robotics-weight-editing/assets/source/original-research-prompt.txt
 - Sparks of Weight-Space Programming: https://rikiyat.github.io/blog/weight-space-programming/
-- Qwen experiment protocol: https://raw.githubusercontent.com/RikiyaT/lm_understand-logs/main/exp8_math/runs/p50c/turns/t001/prompt.txt
+- Language-model experiment protocol: https://raw.githubusercontent.com/RikiyaT/lm_understand-logs/main/exp8_math/runs/p50c/turns/t001/prompt.txt
 
-This is a new navigation-specific protocol inspired by those sources; it is not their original prompt or a reproduction of their reported results.
+These sources motivate the investigation workflow. This is a new navigation experiment, not a reproduction of their reported results.
