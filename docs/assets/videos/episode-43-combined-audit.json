@@ -1,0 +1,1182 @@
+{
+  "episodeId": 43,
+  "status": "passed",
+  "steps": [
+    {
+      "step": 0,
+      "action": null,
+      "expectedPosition": [
+        4.5338897705078125,
+        0.12711000442504883,
+        -2.264050006866455
+      ],
+      "replayedPosition": [
+        4.5338897705078125,
+        0.12711000442504883,
+        -2.264050006866455
+      ],
+      "expectedDistanceToGoal": 10.955527305603027,
+      "replayedDistanceToGoal": 10.955527305603027,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 1,
+      "action": 2,
+      "expectedPosition": [
+        4.5338897705078125,
+        0.12711000442504883,
+        -2.264050006866455
+      ],
+      "replayedPosition": [
+        4.5338897705078125,
+        0.12711000442504883,
+        -2.264050006866455
+      ],
+      "expectedDistanceToGoal": 10.955527305603027,
+      "replayedDistanceToGoal": 10.955527305603027,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 2,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -2.022568464279175
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -2.022568464279175
+      ],
+      "expectedDistanceToGoal": 10.725295066833496,
+      "replayedDistanceToGoal": 10.725295066833496,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 3,
+      "action": 2,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -2.022568464279175
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -2.022568464279175
+      ],
+      "expectedDistanceToGoal": 10.725295066833496,
+      "replayedDistanceToGoal": 10.725295066833496,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 4,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.7725684642791748
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.7725684642791748
+      ],
+      "expectedDistanceToGoal": 10.478788375854492,
+      "replayedDistanceToGoal": 10.478788375854492,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 5,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.5225684642791748
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.5225684642791748
+      ],
+      "expectedDistanceToGoal": 10.233193397521973,
+      "replayedDistanceToGoal": 10.233193397521973,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 6,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.2725684642791748
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.2725684642791748
+      ],
+      "expectedDistanceToGoal": 9.98891830444336,
+      "replayedDistanceToGoal": 9.98891830444336,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 7,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.0225684642791748
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -1.0225684642791748
+      ],
+      "expectedDistanceToGoal": 9.74664306640625,
+      "replayedDistanceToGoal": 9.74664306640625,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 8,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.7725684642791748
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.7725684642791748
+      ],
+      "expectedDistanceToGoal": 9.507608413696289,
+      "replayedDistanceToGoal": 9.507608413696289,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 9,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.5225684642791748
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.5225684642791748
+      ],
+      "expectedDistanceToGoal": 9.274283409118652,
+      "replayedDistanceToGoal": 9.274283409118652,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 10,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.2725684642791748
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.2725684642791748
+      ],
+      "expectedDistanceToGoal": 9.052238464355469,
+      "replayedDistanceToGoal": 9.052238464355469,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 11,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.022568464279174805
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        -0.022568464279174805
+      ],
+      "expectedDistanceToGoal": 8.855997085571289,
+      "replayedDistanceToGoal": 8.855997085571289,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 12,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.2274315357208252
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.2274315357208252
+      ],
+      "expectedDistanceToGoal": 8.712718963623047,
+      "replayedDistanceToGoal": 8.712718963623047,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 13,
+      "action": 1,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "expectedDistanceToGoal": 8.605358123779297,
+      "replayedDistanceToGoal": 8.605358123779297,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 14,
+      "action": 2,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "expectedDistanceToGoal": 8.605358123779297,
+      "replayedDistanceToGoal": 8.605358123779297,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 15,
+      "action": 2,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "expectedDistanceToGoal": 8.605358123779297,
+      "replayedDistanceToGoal": 8.605358123779297,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 16,
+      "action": 2,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "expectedDistanceToGoal": 8.605358123779297,
+      "replayedDistanceToGoal": 8.605358123779297,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 17,
+      "action": 2,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "expectedDistanceToGoal": 8.605358123779297,
+      "replayedDistanceToGoal": 8.605358123779297,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 18,
+      "action": 2,
+      "expectedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "replayedPosition": [
+        4.469184875488281,
+        0.12711000442504883,
+        0.4774315357208252
+      ],
+      "expectedDistanceToGoal": 8.605358123779297,
+      "replayedDistanceToGoal": 8.605358123779297,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 19,
+      "action": 1,
+      "expectedPosition": [
+        4.710666179656982,
+        0.12711000442504883,
+        0.5421363711357117
+      ],
+      "replayedPosition": [
+        4.710666179656982,
+        0.12711000442504883,
+        0.5421363711357117
+      ],
+      "expectedDistanceToGoal": 8.358356475830078,
+      "replayedDistanceToGoal": 8.358356475830078,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 20,
+      "action": 1,
+      "expectedPosition": [
+        4.952147483825684,
+        0.12711000442504883,
+        0.6068412065505981
+      ],
+      "replayedPosition": [
+        4.952147483825684,
+        0.12711000442504883,
+        0.6068412065505981
+      ],
+      "expectedDistanceToGoal": 8.11186408996582,
+      "replayedDistanceToGoal": 8.11186408996582,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 21,
+      "action": 1,
+      "expectedPosition": [
+        5.193628787994385,
+        0.12711000442504883,
+        0.6715460419654846
+      ],
+      "replayedPosition": [
+        5.193628787994385,
+        0.12711000442504883,
+        0.6715460419654846
+      ],
+      "expectedDistanceToGoal": 7.866023063659668,
+      "replayedDistanceToGoal": 7.866023063659668,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 22,
+      "action": 1,
+      "expectedPosition": [
+        5.435110092163086,
+        0.12711000442504883,
+        0.7362508773803711
+      ],
+      "replayedPosition": [
+        5.435110092163086,
+        0.12711000442504883,
+        0.7362508773803711
+      ],
+      "expectedDistanceToGoal": 7.621032238006592,
+      "replayedDistanceToGoal": 7.621032238006592,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 23,
+      "action": 1,
+      "expectedPosition": [
+        5.676591396331787,
+        0.12711000442504883,
+        0.8009557127952576
+      ],
+      "replayedPosition": [
+        5.676591396331787,
+        0.12711000442504883,
+        0.8009557127952576
+      ],
+      "expectedDistanceToGoal": 7.3771772384643555,
+      "replayedDistanceToGoal": 7.3771772384643555,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 24,
+      "action": 1,
+      "expectedPosition": [
+        5.918072700500488,
+        0.12711000442504883,
+        0.865660548210144
+      ],
+      "replayedPosition": [
+        5.918072700500488,
+        0.12711000442504883,
+        0.865660548210144
+      ],
+      "expectedDistanceToGoal": 7.134886264801025,
+      "replayedDistanceToGoal": 7.134886264801025,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 25,
+      "action": 1,
+      "expectedPosition": [
+        6.1595540046691895,
+        0.12711000442504883,
+        0.9303653836250305
+      ],
+      "replayedPosition": [
+        6.1595540046691895,
+        0.12711000442504883,
+        0.9303653836250305
+      ],
+      "expectedDistanceToGoal": 6.894827365875244,
+      "replayedDistanceToGoal": 6.894827365875244,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 26,
+      "action": 1,
+      "expectedPosition": [
+        6.401035308837891,
+        0.12711000442504883,
+        0.995070219039917
+      ],
+      "replayedPosition": [
+        6.401035308837891,
+        0.12711000442504883,
+        0.995070219039917
+      ],
+      "expectedDistanceToGoal": 6.6580986976623535,
+      "replayedDistanceToGoal": 6.6580986976623535,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 27,
+      "action": 1,
+      "expectedPosition": [
+        6.642516613006592,
+        0.12711000442504883,
+        1.0597751140594482
+      ],
+      "replayedPosition": [
+        6.642516613006592,
+        0.12711000442504883,
+        1.0597751140594482
+      ],
+      "expectedDistanceToGoal": 6.4266204833984375,
+      "replayedDistanceToGoal": 6.4266204833984375,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 28,
+      "action": 1,
+      "expectedPosition": [
+        6.883997917175293,
+        0.12711000442504883,
+        1.1244800090789795
+      ],
+      "replayedPosition": [
+        6.883997917175293,
+        0.12711000442504883,
+        1.1244800090789795
+      ],
+      "expectedDistanceToGoal": 6.202311992645264,
+      "replayedDistanceToGoal": 6.202311992645264,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 29,
+      "action": 1,
+      "expectedPosition": [
+        7.125479221343994,
+        0.12711000442504883,
+        1.1891849040985107
+      ],
+      "replayedPosition": [
+        7.125479221343994,
+        0.12711000442504883,
+        1.1891849040985107
+      ],
+      "expectedDistanceToGoal": 5.9837236404418945,
+      "replayedDistanceToGoal": 5.9837236404418945,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 30,
+      "action": 1,
+      "expectedPosition": [
+        7.366960525512695,
+        0.12711000442504883,
+        1.253889799118042
+      ],
+      "replayedPosition": [
+        7.366960525512695,
+        0.12711000442504883,
+        1.253889799118042
+      ],
+      "expectedDistanceToGoal": 5.7723917961120605,
+      "replayedDistanceToGoal": 5.7723917961120605,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 31,
+      "action": 1,
+      "expectedPosition": [
+        7.6084418296813965,
+        0.12711000442504883,
+        1.3185946941375732
+      ],
+      "replayedPosition": [
+        7.6084418296813965,
+        0.12711000442504883,
+        1.3185946941375732
+      ],
+      "expectedDistanceToGoal": 5.570830345153809,
+      "replayedDistanceToGoal": 5.570830345153809,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 32,
+      "action": 1,
+      "expectedPosition": [
+        7.849923133850098,
+        0.12711000442504883,
+        1.3832995891571045
+      ],
+      "replayedPosition": [
+        7.849923133850098,
+        0.12711000442504883,
+        1.3832995891571045
+      ],
+      "expectedDistanceToGoal": 5.382640361785889,
+      "replayedDistanceToGoal": 5.382640361785889,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 33,
+      "action": 1,
+      "expectedPosition": [
+        8.091404914855957,
+        0.12711000442504883,
+        1.4480044841766357
+      ],
+      "replayedPosition": [
+        8.091404914855957,
+        0.12711000442504883,
+        1.4480044841766357
+      ],
+      "expectedDistanceToGoal": 5.212956428527832,
+      "replayedDistanceToGoal": 5.212956428527832,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 34,
+      "action": 1,
+      "expectedPosition": [
+        8.332886695861816,
+        0.12711000442504883,
+        1.512709379196167
+      ],
+      "replayedPosition": [
+        8.332886695861816,
+        0.12711000442504883,
+        1.512709379196167
+      ],
+      "expectedDistanceToGoal": 5.0688886642456055,
+      "replayedDistanceToGoal": 5.0688886642456055,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 35,
+      "action": 1,
+      "expectedPosition": [
+        8.574368476867676,
+        0.12711000442504883,
+        1.5774142742156982
+      ],
+      "replayedPosition": [
+        8.574368476867676,
+        0.12711000442504883,
+        1.5774142742156982
+      ],
+      "expectedDistanceToGoal": 4.962131023406982,
+      "replayedDistanceToGoal": 4.962131023406982,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 36,
+      "action": 1,
+      "expectedPosition": [
+        8.815850257873535,
+        0.12711000442504883,
+        1.6421191692352295
+      ],
+      "replayedPosition": [
+        8.815850257873535,
+        0.12711000442504883,
+        1.6421191692352295
+      ],
+      "expectedDistanceToGoal": 4.304232597351074,
+      "replayedDistanceToGoal": 4.304232597351074,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 37,
+      "action": 1,
+      "expectedPosition": [
+        9.057332038879395,
+        0.12711000442504883,
+        1.7068240642547607
+      ],
+      "replayedPosition": [
+        9.057332038879395,
+        0.12711000442504883,
+        1.7068240642547607
+      ],
+      "expectedDistanceToGoal": 4.054234504699707,
+      "replayedDistanceToGoal": 4.054234504699707,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 38,
+      "action": 1,
+      "expectedPosition": [
+        9.298813819885254,
+        0.12711000442504883,
+        1.771528959274292
+      ],
+      "replayedPosition": [
+        9.298813819885254,
+        0.12711000442504883,
+        1.771528959274292
+      ],
+      "expectedDistanceToGoal": 3.8042402267456055,
+      "replayedDistanceToGoal": 3.8042402267456055,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 39,
+      "action": 1,
+      "expectedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "replayedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "expectedDistanceToGoal": 3.5546629428863525,
+      "replayedDistanceToGoal": 3.5546629428863525,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 40,
+      "action": 3,
+      "expectedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "replayedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "expectedDistanceToGoal": 3.5546629428863525,
+      "replayedDistanceToGoal": 3.5546629428863525,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 41,
+      "action": 3,
+      "expectedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "replayedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "expectedDistanceToGoal": 3.5546629428863525,
+      "replayedDistanceToGoal": 3.5546629428863525,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 42,
+      "action": 3,
+      "expectedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "replayedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "expectedDistanceToGoal": 3.5546629428863525,
+      "replayedDistanceToGoal": 3.5546629428863525,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 43,
+      "action": 2,
+      "expectedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "replayedPosition": [
+        9.540295600891113,
+        0.12711000442504883,
+        1.8362338542938232
+      ],
+      "expectedDistanceToGoal": 3.5546629428863525,
+      "replayedDistanceToGoal": 3.5546629428863525,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 44,
+      "action": 1,
+      "expectedPosition": [
+        9.717072486877441,
+        0.12711000442504883,
+        2.0130105018615723
+      ],
+      "replayedPosition": [
+        9.717072486877441,
+        0.12711000442504883,
+        2.0130105018615723
+      ],
+      "expectedDistanceToGoal": 3.3045318126678467,
+      "replayedDistanceToGoal": 3.3045318126678467,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 45,
+      "action": 1,
+      "expectedPosition": [
+        9.89384937286377,
+        0.12711000442504883,
+        2.1897873878479004
+      ],
+      "replayedPosition": [
+        9.89384937286377,
+        0.12711000442504883,
+        2.1897873878479004
+      ],
+      "expectedDistanceToGoal": 3.054534912109375,
+      "replayedDistanceToGoal": 3.054534912109375,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 46,
+      "action": 1,
+      "expectedPosition": [
+        10.070626258850098,
+        0.12711000442504883,
+        2.3665642738342285
+      ],
+      "replayedPosition": [
+        10.070626258850098,
+        0.12711000442504883,
+        2.3665642738342285
+      ],
+      "expectedDistanceToGoal": 2.804896354675293,
+      "replayedDistanceToGoal": 2.804896354675293,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 47,
+      "action": 1,
+      "expectedPosition": [
+        10.247403144836426,
+        0.12711000442504883,
+        2.5433411598205566
+      ],
+      "replayedPosition": [
+        10.247403144836426,
+        0.12711000442504883,
+        2.5433411598205566
+      ],
+      "expectedDistanceToGoal": 2.555454730987549,
+      "replayedDistanceToGoal": 2.555454730987549,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 48,
+      "action": 1,
+      "expectedPosition": [
+        10.424180030822754,
+        0.12711000442504883,
+        2.7201180458068848
+      ],
+      "replayedPosition": [
+        10.424180030822754,
+        0.12711000442504883,
+        2.7201180458068848
+      ],
+      "expectedDistanceToGoal": 2.306429147720337,
+      "replayedDistanceToGoal": 2.306429147720337,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 49,
+      "action": 1,
+      "expectedPosition": [
+        10.600956916809082,
+        0.12711000442504883,
+        2.896894931793213
+      ],
+      "replayedPosition": [
+        10.600956916809082,
+        0.12711000442504883,
+        2.896894931793213
+      ],
+      "expectedDistanceToGoal": 2.058556318283081,
+      "replayedDistanceToGoal": 2.058556318283081,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 50,
+      "action": 1,
+      "expectedPosition": [
+        10.77773380279541,
+        0.12711000442504883,
+        3.073671817779541
+      ],
+      "replayedPosition": [
+        10.77773380279541,
+        0.12711000442504883,
+        3.073671817779541
+      ],
+      "expectedDistanceToGoal": 1.8166450262069702,
+      "replayedDistanceToGoal": 1.8166450262069702,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 51,
+      "action": 1,
+      "expectedPosition": [
+        10.925886154174805,
+        0.12711000442504883,
+        3.2933857440948486
+      ],
+      "replayedPosition": [
+        10.925886154174805,
+        0.12711000442504883,
+        3.2933857440948486
+      ],
+      "expectedDistanceToGoal": 1.5410757064819336,
+      "replayedDistanceToGoal": 1.5410757064819336,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 52,
+      "action": 1,
+      "expectedPosition": [
+        11.102663040161133,
+        0.12711000442504883,
+        3.4701623916625977
+      ],
+      "replayedPosition": [
+        11.102663040161133,
+        0.12711000442504883,
+        3.4701623916625977
+      ],
+      "expectedDistanceToGoal": 1.2936010360717773,
+      "replayedDistanceToGoal": 1.2936010360717773,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 53,
+      "action": 3,
+      "expectedPosition": [
+        11.102663040161133,
+        0.12711000442504883,
+        3.4701623916625977
+      ],
+      "replayedPosition": [
+        11.102663040161133,
+        0.12711000442504883,
+        3.4701623916625977
+      ],
+      "expectedDistanceToGoal": 1.2936010360717773,
+      "replayedDistanceToGoal": 1.2936010360717773,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 54,
+      "action": 1,
+      "expectedPosition": [
+        11.227663040161133,
+        0.12711000442504883,
+        3.686668634414673
+      ],
+      "replayedPosition": [
+        11.227663040161133,
+        0.12711000442504883,
+        3.686668634414673
+      ],
+      "expectedDistanceToGoal": 1.0698460340499878,
+      "replayedDistanceToGoal": 1.0698460340499878,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 55,
+      "action": 1,
+      "expectedPosition": [
+        11.352663040161133,
+        0.12711000442504883,
+        3.903174877166748
+      ],
+      "replayedPosition": [
+        11.352663040161133,
+        0.12711000442504883,
+        3.903174877166748
+      ],
+      "expectedDistanceToGoal": 0.8606611490249634,
+      "replayedDistanceToGoal": 0.8606611490249634,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 56,
+      "action": 1,
+      "expectedPosition": [
+        11.477663040161133,
+        0.12711000442504883,
+        4.119681358337402
+      ],
+      "replayedPosition": [
+        11.477663040161133,
+        0.12711000442504883,
+        4.119681358337402
+      ],
+      "expectedDistanceToGoal": 0.6796355843544006,
+      "replayedDistanceToGoal": 0.6796355843544006,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 57,
+      "action": 3,
+      "expectedPosition": [
+        11.477663040161133,
+        0.12711000442504883,
+        4.119681358337402
+      ],
+      "replayedPosition": [
+        11.477663040161133,
+        0.12711000442504883,
+        4.119681358337402
+      ],
+      "expectedDistanceToGoal": 0.6796355843544006,
+      "replayedDistanceToGoal": 0.6796355843544006,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 58,
+      "action": 1,
+      "expectedPosition": [
+        11.542367935180664,
+        0.12711000442504883,
+        4.3611626625061035
+      ],
+      "replayedPosition": [
+        11.542367935180664,
+        0.12711000442504883,
+        4.3611626625061035
+      ],
+      "expectedDistanceToGoal": 0.6190873384475708,
+      "replayedDistanceToGoal": 0.6190873384475708,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 59,
+      "action": 1,
+      "expectedPosition": [
+        11.607072830200195,
+        0.12711000442504883,
+        4.602643966674805
+      ],
+      "replayedPosition": [
+        11.607072830200195,
+        0.12711000442504883,
+        4.602643966674805
+      ],
+      "expectedDistanceToGoal": 0.6554644107818604,
+      "replayedDistanceToGoal": 0.6554644107818604,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 60,
+      "action": 1,
+      "expectedPosition": [
+        11.671777725219727,
+        0.12711000442504883,
+        4.844125270843506
+      ],
+      "replayedPosition": [
+        11.671777725219727,
+        0.12711000442504883,
+        4.844125270843506
+      ],
+      "expectedDistanceToGoal": 0.7752406001091003,
+      "replayedDistanceToGoal": 0.7752406001091003,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    },
+    {
+      "step": 61,
+      "action": 0,
+      "expectedPosition": [
+        11.671777725219727,
+        0.12711000442504883,
+        4.844125270843506
+      ],
+      "replayedPosition": [
+        11.671777725219727,
+        0.12711000442504883,
+        4.844125270843506
+      ],
+      "expectedDistanceToGoal": 0.7752406001091003,
+      "replayedDistanceToGoal": 0.7752406001091003,
+      "positionMaxAbsErrorM": 0.0,
+      "distanceAbsErrorM": 0.0
+    }
+  ],
+  "auditedStates": 62,
+  "includesInitialState": true,
+  "includesFinalStopState": true,
+  "maxPositionErrorM": 0.0,
+  "maxDistanceErrorM": 0.0,
+  "finalMetricChecks": {
+    "success": {
+      "expected": 1.0,
+      "replayed": 1.0,
+      "absoluteError": 0.0,
+      "tolerance": 1e-07
+    },
+    "spl": {
+      "expected": 0.9311966176780451,
+      "replayed": 0.9311966176780451,
+      "absoluteError": 0.0,
+      "tolerance": 1e-07
+    },
+    "distance_to_goal": {
+      "expected": 0.7752406001091003,
+      "replayed": 0.7752406001091003,
+      "absoluteError": 0.0,
+      "tolerance": 1e-05
+    },
+    "ndtw": {
+      "expected": 0.8397209654507074,
+      "replayed": 0.8397209654507074,
+      "absoluteError": 0.0,
+      "tolerance": 1e-07
+    },
+    "path_length": {
+      "expected": 11.764999032020569,
+      "replayed": 11.764999032020569,
+      "absoluteError": 0.0,
+      "tolerance": 1e-07
+    },
+    "oracle_success": {
+      "expected": 1.0,
+      "replayed": 1.0,
+      "absoluteError": 0.0,
+      "tolerance": 1e-07
+    },
+    "steps_taken": {
+      "expected": 61.0,
+      "replayed": 61.0,
+      "absoluteError": 0.0,
+      "tolerance": 1e-07
+    }
+  },
+  "explicitStopMatches": true,
+  "rgb": {
+    "shape": [
+      512,
+      512,
+      3
+    ],
+    "minimumFrameStd": 37.818081493543374,
+    "minimumFrameMean": 90.9355354309082,
+    "maximumFrameMean": 152.70956802368164
+  }
+}

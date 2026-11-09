@@ -78,3 +78,18 @@
 @media (prefers-reduced-motion: reduce) {
   .video-case-tab { transition: none; }
 }
+
+/* Thumbnail gallery keeps all eight comparisons visible above the player. */
+.video-selector-row { display: block; }
+.video-selector-label { margin-bottom: 14px; }
+.video-case-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.video-case-tab { display: flex; flex-direction: column; align-items: stretch; gap: 0; min-width: 0; padding: 0; overflow: hidden; border: 1px solid var(--line, #dce3d7); text-align: left; background: #fff; }
+.video-case-tab img { display: block; width: 100%; height: auto; aspect-ratio: 1060 / 840; object-fit: contain; }
+.video-case-tab > .video-case-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; padding: 10px 10px 5px; color: inherit; font: 500 10px/1.5 var(--mono, monospace); }
+.video-case-heading > span { font-family: var(--body, sans-serif); color: inherit; }
+.video-case-tab > .video-case-detail { padding: 0 10px 10px; font: 10px/1.5 var(--mono, monospace); color: var(--muted, #69756d); }
+.video-case-tab[aria-selected="true"] > span { color: #fff; opacity: 1; }
+.video-case-summary { font-size: 13px; line-height: 1.65; color: var(--text, #1c2a22); margin: 0 0 12px; }
+@media (max-width: 600px) {
+  .video-case-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

@@ -8,7 +8,7 @@ An English technical research blog about a frozen NaVILA weight-editing experime
 
 - Four variants, evaluated on the same first 50 R2R-CE val_unseen episodes.
 - Interactive comparisons of navigation success, precise stopping, SPL and model calls.
-- Four real Habitat RGB video comparisons, covering every gained-success episode (6, 19, 21, 22).
+- Eight real Habitat RGB video comparisons at the start of Results: every gained success (6, 19, 21, 22), two shared successes (2, 43), the lost success (13), and a persistent failure (28). A thumbnail gallery switches between the paired replays.
 - Six pairs of real recorded trajectories, including all four gained successes and the one lost success.
 - The complete 50-episode paired outcome grid and downloadable data.
 - Methods, uncertainty, negative results and the distinction between lower overall inference demand and successful-task speed.

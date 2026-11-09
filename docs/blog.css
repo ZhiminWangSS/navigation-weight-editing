@@ -199,7 +199,7 @@
 .blog-article .speed-pair strong { font-size: 23px; }
 .blog-article .decomposition-heading { flex-wrap: wrap; gap: 6px; }
 .blog-article .video-selector-row { padding: 19px 23px; gap: 14px; }
-.blog-article .video-case-tab { min-width: 96px; gap: 8px; padding-inline: 10px; }
+.blog-article .video-case-tab { min-width: 0; gap: 0; padding: 0; }
 .blog-article .video-context { grid-template-columns: minmax(0, 1fr) minmax(285px, .9fr); gap: 26px; padding: 24px; }
 .blog-article .video-footer { padding: 19px 24px 22px; }
 .blog-article .video-instruction { font-size: 12px; }
@@ -345,7 +345,7 @@
   .blog-article .chart-footer { gap: 10px; }
   .blog-article .video-selector-row { padding: 17px; }
   .blog-article .video-context { padding: 21px 17px; }
-  .blog-article .video-case-tab { padding: 8px 3px; }
+  .blog-article .video-case-tab { padding: 0; }
   .blog-article .video-footer { padding: 17px; }
   .blog-article .trajectory-toolbar { flex-wrap: wrap; padding: 17px; }
   .blog-article .trajectory-legend { flex-wrap: wrap; gap: 12px; }
@@ -387,4 +387,8 @@
   .article-section { break-inside: auto; }
   .article-section-title, .article-prose h3 { break-after: avoid; }
   .citation-card pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+}
+
+@media (max-width: 600px) {
+  .blog-article .video-case-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

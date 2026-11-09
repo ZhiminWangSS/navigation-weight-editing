@@ -13,6 +13,7 @@
     const panel = section.querySelector('[data-video-panel]');
     const instruction = section.querySelector('[data-video-instruction]');
     const title = section.querySelector('[data-video-title]');
+    const summary = section.querySelector('[data-video-summary]');
     const status = section.querySelector('[data-video-status]');
     const fallback = section.querySelector('[data-video-fallback]');
     const downloads = [...section.querySelectorAll('[data-video-download]')];
@@ -33,7 +34,7 @@
     tabs.forEach(tab => {
       const id = Number(tab.dataset.videoEpisode);
       const episode = data?.episodes?.find(item => Number(item.id) === id);
-      const trajectory = data?.trajectories?.find(item => Number(item.id) === id);
+      const trajectory = window.REPLAY_DATA?.find(item => Number(item.id) === id) || data?.trajectories?.find(item => Number(item.id) === id);
       if (episode && trajectory?.instruction) {
         records.set(id, { episode, trajectory });
       } else {
@@ -69,6 +70,7 @@
 
       title.textContent = `Episode ${label}`;
       instruction.textContent = trajectory.instruction.trim();
+      if (summary) summary.textContent = trajectory.summary || "";
       metric('baseline-success', episode.baselineSuccess ? 'Success' : 'Failed');
       metric('combined-success', episode.combinedSuccess ? 'Success' : 'Failed');
       metric('baseline-calls', String(episode.baselineQueries));
